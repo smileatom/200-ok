@@ -1,6 +1,6 @@
 {
   "name": "200-ok",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A cli http server to fire local requests at that always responds 200 OK.",
   "main": "./index",
   "scripts": {},
