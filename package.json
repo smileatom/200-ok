@@ -1,0 +1,21 @@
+{
+  "name": "200-OK",
+  "version": "1.0.0",
+  "description": "A cli http server to fire local requests at that always responds 200 OK.",
+  "main": "./index",
+  "scripts": {},
+  "keywords": [
+    "http",
+    "server",
+    "testing",
+    "localhost"
+  ],
+  "bin": {
+    "200-OK": "./cli.js"
+  },
+  "author": "waveatom",
+  "license": "MIT",
+  "dependencies": {
+    "optimist": "^0.6.1"
+  }
+}
