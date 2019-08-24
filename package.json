@@ -1,5 +1,5 @@
 {
-  "name": "200-OK",
+  "name": "200-ok",
   "version": "1.0.0",
   "description": "A cli http server to fire local requests at that always responds 200 OK.",
   "main": "./index",
@@ -11,11 +11,11 @@
     "localhost"
   ],
   "bin": {
-    "200-OK": "./cli.js"
+    "200-ok": "./cli.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/waveatom/200-OK"
+    "url": "https://github.com/waveatom/200-ok"
   },
   "author": "waveatom",
   "license": "MIT",

@@ -6,7 +6,7 @@ function end(res) {
 }
 
 function start(port = 2000) {
-  console.log(`200-OK: listening on port ${port}...`);
+  console.log(`200-ok: listening on port ${port}...`);
 
   http.createServer(function (req, res) {
     console.log(`\n${req.method} ${req.url}\n-------------------------------`);
