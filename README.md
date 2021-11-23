@@ -2,7 +2,7 @@
 A cli http server to fire local requests at that always responds 200 OK.
 
 With cli options can customize status codes for common methods, body reflection,
-content-type header, and whether to return responses body at all.
+content-type header, and whether to return response body at all.
 
 ## Pre-requisites
 
@@ -49,7 +49,7 @@ Usage: 200-ok [-p port] [--del 200] [--get 200] [--head 200] [--patch 200]
 [--reflect-all] false [-h]
 
 Options:
--p                   port                                      [default: 2000]
+-p               port                                      [default: 2000]
 --del            DELETE                                     [default: 200]
 --get            GET                                        [default: 200]
 --head           HEAD                                       [default: 200]
@@ -62,7 +62,7 @@ Options:
 --reflect-put    Reflect PUT body               [boolean] [default: false]
 --reflect-patch  Reflect PATCH body             [boolean] [default: false]
 --reflect-all    Reflect ALL bodies             [boolean] [default: false]
--h                   Show help                                       [boolean]
+-h               Show help                                       [boolean]
 ```
 
 
