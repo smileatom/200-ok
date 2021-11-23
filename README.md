@@ -44,7 +44,7 @@ Type -h at the cli for usage.
 
 ```
 Usage: 200-ok [-p port] [--del 200] [--get 200] [--head 200] [--patch 200]
-[--post 200] [--put 200] [--content-type text/plain] [--response-body false]
+[--post 200] [--put 200] [--content-type text/plain] [--response-body true]
 [--reflect-post false] [--reflect-put] false [--reflect-patch] false
 [--reflect-all] false [-h]
 
