@@ -1,6 +1,6 @@
 {
   "name": "200-ok",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A cli http server to fire local requests at that always responds 200 OK.",
   "main": "./index",
   "scripts": {},
@@ -20,6 +20,6 @@
   "author": "waveatom",
   "license": "MIT",
   "dependencies": {
-    "optimist": "^0.6.1"
+    "yargs": "^17.2.1"
   }
 }

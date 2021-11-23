@@ -1,11 +1,21 @@
 const http = require('http');
 
-function end(res) {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('{"200":"OK"}');
+function end(req, res, opts, body) {
+  const status = opts[req.method] || 200;
+  res.writeHead(status, {'Content-Type': opts.contentType});
+  if (req.method[0] === 'P' && (opts.reflectAll ||
+      (req.method === 'POST' && opts.reflectPost) ||
+      (req.method === 'PUT' && opts.reflectPut) ||
+      (req.method === 'PATCH' && opts.reflectPatch))) {
+    res.end(body || "");
+  } else if (opts.responseBody) {
+    res.end(`{"${status}":"${http.STATUS_CODES[status]}"}`);
+  } else {
+    res.end("");
+  }
 }
 
-function start(port = 2000) {
+function start(port = 2000, opts) {
   console.log(`200-ok: listening on port ${port}...`);
 
   http.createServer(function (req, res) {
@@ -16,16 +26,16 @@ function start(port = 2000) {
     if (req.method[0] === 'P') {
       let body = '';
       req.on('data', chunk => {
-        body += chunk.toString(); // convert Buffer to string
+        body += chunk.toString();
       });
       req.on('end', () => {
         console.log('-------------------------------');
         console.log(`body: ${body}`);
         console.log(`len: ${body.length}`);
-        end(res);
+        end(req, res, opts, body);
       });
     } else {
-      end(res);
+      end(req, res, opts, null);
     }
   }).listen(port);
 
