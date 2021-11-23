@@ -52,5 +52,11 @@ const argv = require('yargs/yargs')(process.argv.slice(2))
     .help('h').argv;
 
 if (argv.p && argv.p !== true && !isNaN(argv.p)) {
+  argv.DELETE = argv.del;
+  argv.GET = argv.get;
+  argv.HEAD = argv.head;
+  argv.PATCH = argv.patch;
+  argv.POST = argv.post;
+  argv.PUT = argv.put;
   require("./index").start(argv.p, argv);
 }
